@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cafe and WiFi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #bfbfbf;
+            text-align: center;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            float: right;
+            color: white;
+            text-align: center;
+            padding: 12px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .logo {
+            float: left;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+        .logo span {
+            color: #f0f0f0;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 26px;
+        }
+        .content {
+            margin-top: 120px;
+        }
+        .content img {
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .start-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .start-btn:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin-top: 20px;
+            color: green;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/743/743007.png" alt="Cafe Logo">
+            <span>Cafe & WiFi</span>
+        </div>
+        <a href="/logout">Logout</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        <a href="/">Home</a>
+    </div>
+
+    <div class="content">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Cafe Image">
+        <br>
+        <a href="/view" class="start-btn">View Cafes</a>
+    </div>
+
+    {% if message %}
+    <p class="message">{{ message }}</p>
+    {% endif %}
+</body>
+</html>
